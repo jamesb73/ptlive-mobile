@@ -1,0 +1,15 @@
+<ion-content>
+
+	<ptlive-content [logo]="true">
+
+	  	<ptlive-input type="text" placeholder="Email" [(value)]="httpt.formData.email" [(error)]="httpt.errors.email"></ptlive-input>
+
+	  	<ptlive-input type="password" placeholder="Password" [(value)]="httpt.formData.password" [(error)]="httpt.errors.password"></ptlive-input>
+
+		<button ion-button (click)="login()">Login</button>
+
+		<div class="pt-info" (click)="signup()">Not a packet member? <span class="pt-info--color"> Create an account </span></div>
+
+	</ptlive-content>
+
+</ion-content>

@@ -1,0 +1,51 @@
+.ptlive-input {
+
+	position: relative;
+
+	&--field {
+	
+		background-color: #eee;
+		height: 40px;
+		padding-left: 10px; 
+		color: color($colors, dark, base);
+		margin-bottom: 15px;
+		margin-top: 5px;
+		width: 100%;
+		border: 1px solid #eee;
+
+		&:focus {
+			border: 1px solid color($colors, primary, base);
+		}
+
+		&::placeholder {
+			color: #ccc;
+		}
+	}
+
+	&--field.has-error {
+		border: 1px solid color($colors, danger, base) !important;
+	}
+
+	&--error {
+		color: color($colors, danger, base);
+		position: absolute;
+		font-size: 12px;
+		bottom: 1px;
+	}
+
+	@media only screen 
+	  and (max-device-width: 320px) {
+
+		.ptlive-input {
+
+			&--field {
+				height: 35px;
+			}
+
+			&--error {
+				font-size: 11px;
+				bottom: 0;
+			}
+		}
+	}
+}

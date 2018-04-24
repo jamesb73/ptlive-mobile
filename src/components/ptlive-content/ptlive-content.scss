@@ -1,0 +1,65 @@
+ptlive-content {
+
+	.pt-content {
+		padding: 0 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		max-width: 400px;
+
+		&--inner {
+			background-color: #fff;
+			width: 100%;
+			padding: 25px;
+			box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.22);
+
+			&__logo{
+				height: 40px;
+				display: block;
+				margin: 0 auto 40px auto;
+			}
+
+			.button {
+				width: 100%;
+				border-radius: 0;
+				margin: 10px 0;
+				padding: 0;
+				height: 40px;
+			}
+
+			.pt-info {
+				color: color($colors, dark, base);
+				text-align: center;
+				font-size: 12px;
+				margin-top: 15px;
+
+				&--color {
+					color: color($colors, primary, base);
+				}
+			}
+		}
+	}
+
+	@media only screen 
+	  and (max-device-width: 320px){
+
+		.pt-content {
+			padding: 0 15px;
+
+			&--inner {
+				padding: 15px;
+
+				&__logo{
+					height: 35px;
+				}
+
+				.button {
+					width: 100%;
+					height: 35px;
+				}
+			}
+		}
+	}
+}
