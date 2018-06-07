@@ -1,0 +1,41 @@
+ptlive-menu {
+
+	.ptlive-menu{
+
+		background-color: #fff;
+		height: 100%;
+
+		&__logo {
+			padding: 30px;
+			text-align: center;
+			background-image: url("../assets/imgs/ptbackground3.svg");
+			background-size: 90px;
+			border-bottom: 1px solid #e6e6e6;
+
+			&--img {
+				height: 120px;
+				margin: auto;
+			}
+		}
+
+		&__item {
+			display: flex;
+			width: 100%;
+			padding: 15px;
+			align-items: center;
+
+			&--icon {
+				text-align: left;
+				color: color($colors, primary, base);
+				font-size: 20px;
+				width: 40px;
+			}
+
+			&--text {
+				flex: 1;
+				font-size: 18px;
+			}
+		}
+	}
+
+}

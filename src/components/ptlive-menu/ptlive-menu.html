@@ -1,0 +1,31 @@
+<ion-menu type="overlay" [content]="content">
+  	<ion-content>
+  		<div class="ptlive-menu">
+  			
+  			<div class="ptlive-menu__logo">
+				<img class="ptlive-menu__logo--img" src="assets/imgs/logogreen_n_grey.svg" />
+			</div>
+	  		
+      		<div class="ptlive-menu__item" (click)="goToPage('HomePage')"  menuClose detail-none>
+      			<div class="ptlive-menu__item--icon"> <ion-icon name="home"></ion-icon> </div>
+      			<div class="ptlive-menu__item--text"> Home </div>
+      		</div>
+
+      		<div class="ptlive-menu__item" (click)="goToPage('ChatPage')"  menuClose detail-none>
+      			<div class="ptlive-menu__item--icon"> <ion-icon name="chatboxes"></ion-icon> </div>
+      			<div class="ptlive-menu__item--text"> Chat </div>
+      		</div>
+
+      		<div class="ptlive-menu__item" (click)="goToPage('RoutePage')"  menuClose detail-none>
+      			<div class="ptlive-menu__item--icon"> <ion-icon name="pin"></ion-icon> </div>
+      			<div class="ptlive-menu__item--text"> Route </div>
+      		</div>
+
+      		<div class="ptlive-menu__item" (click)="logout()"  menuClose detail-none>
+      			<div class="ptlive-menu__item--icon"> <ion-icon name="log-out"></ion-icon> </div>
+      			<div class="ptlive-menu__item--text"> Logout </div>
+      		</div>
+	    	
+	    </div>
+  	</ion-content>
+</ion-menu>

@@ -4,26 +4,26 @@
 
 	&--field {
 	
-		background-color: #eee;
 		height: 40px;
-		padding-left: 10px; 
 		color: color($colors, dark, base);
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 		margin-top: 5px;
 		width: 100%;
-		border: 1px solid #eee;
+		border: none;
+		border-bottom: 2px solid #ccc;
+		outline: none;
 
 		&:focus {
-			border: 1px solid color($colors, primary, base);
+			border-bottom: 2px solid color($colors, primary, base);
 		}
 
 		&::placeholder {
-			color: #ccc;
+			color: #a8a8a8;
 		}
 	}
 
 	&--field.has-error {
-		border: 1px solid color($colors, danger, base) !important;
+		border-bottom: 2px solid color($colors, danger, base) !important;
 	}
 
 	&--error {
@@ -40,6 +40,7 @@
 
 			&--field {
 				height: 35px;
+				margin-bottom: 15px;
 			}
 
 			&--error {

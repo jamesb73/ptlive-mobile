@@ -13,12 +13,12 @@ ptlive-content {
 			background-color: #fff;
 			width: 100%;
 			padding: 25px;
-			box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.22);
+			box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.50);
 
 			&__logo{
-				height: 40px;
+				height: 120px;
 				display: block;
-				margin: 0 auto 40px auto;
+				margin: 0 auto 20px auto;
 			}
 
 			.button {
@@ -27,6 +27,7 @@ ptlive-content {
 				margin: 10px 0;
 				padding: 0;
 				height: 40px;
+				border: 1px solid color( $colors, primary, base);
 			}
 
 			.pt-info {
@@ -42,8 +43,7 @@ ptlive-content {
 		}
 	}
 
-	@media only screen 
-	  and (max-device-width: 320px){
+	@media screen and (max-device-width: 320px){
 
 		.pt-content {
 			padding: 0 15px;
@@ -52,7 +52,7 @@ ptlive-content {
 				padding: 15px;
 
 				&__logo{
-					height: 35px;
+					height: 100px;
 				}
 
 				.button {
@@ -61,5 +61,19 @@ ptlive-content {
 				}
 			}
 		}
+	}
+}
+
+@media screen and (max-height: 605px) and (min-width: 321px){
+	.signup .pt-content{
+		top: 0;
+		transform: translate(-50%, 0);
+	}
+}
+
+@media screen and (max-height: 505px) and (max-width: 320px){
+	.signup .pt-content{
+		top: 0;
+		transform: translate(-50%, 0);
 	}
 }

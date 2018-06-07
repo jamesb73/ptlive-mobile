@@ -1,16 +1,16 @@
 <ion-content>
 
-	<ptlive-content [logo]="true">
+	<ptlive-content [logo]="true" class="signup">
 
-		<ptlive-input type="text" placeholder="Name"></ptlive-input>
+		<ptlive-input type="text" placeholder="Name" name="name" [(value)]="httpt.formData.name" [(error)]="httpt.errors.name"></ptlive-input>
 
-		<ptlive-input type="text" placeholder="Email"></ptlive-input>
+		<ptlive-input type="text" placeholder="Email" name="email" [(value)]="httpt.formData.email" [(error)]="httpt.errors.email"></ptlive-input>
 
-		<ptlive-input type="text" placeholder="Group Code"></ptlive-input>
+		<ptlive-input type="text" placeholder="Group Code" name="group_code" [(value)]="httpt.formData.group_code" [(error)]="httpt.errors.group_code"></ptlive-input>
 
-		<ptlive-input type="password" placeholder="Password"></ptlive-input>
+		<ptlive-input type="password" placeholder="Password" name="password" [(value)]="httpt.formData.password" [(error)]="httpt.errors.password"></ptlive-input>
 
-		<ptlive-input type="password" placeholder="Confirm Password"></ptlive-input>
+		<ptlive-input type="password" placeholder="Confirm Password" name="password" [(value)]="httpt.formData.password_confirmation" [(error)]="httpt.errors.password_confirmation"></ptlive-input>
 
 		<button ion-button (click)="signup()">Create Account</button>
 

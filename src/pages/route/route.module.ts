@@ -1,0 +1,13 @@
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { RoutePage } from './route';
+import { HttptliveProvider } from '../../providers/httptlive/httptlive';
+import { ComponentsModule } from '../../components/components.module';
+
+@NgModule({
+  declarations: [RoutePage],
+  imports: [IonicPageModule.forChild(RoutePage), ComponentsModule],
+  entryComponents: [RoutePage],
+  providers: [HttptliveProvider]
+})
+export class RoutePageModule {}

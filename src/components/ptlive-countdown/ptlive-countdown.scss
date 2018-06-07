@@ -1,0 +1,42 @@
+ptlive-countdown {
+
+	.ptlive-countdown {
+		position: relative;
+		padding: 10px;
+		background-color: color($colors, primary, base);
+
+		&--inner {
+			display: flex;
+			text-align: center;
+		}
+
+		&--text {
+			text-align: center;
+			margin: 0 20px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #fff;
+			color: #fff;
+			font-size: 16px;
+		}
+
+		&--item {
+			flex: 1;
+			display: inline-block;
+			margin: 5px;
+			text-align: center;
+			color: #fff;
+
+			&__count{
+				font-size: 28px;
+				font-weight: 500;
+				height: 36px;
+				line-height: 50px;
+			}
+
+			&__text {
+				margin: 5px 0;
+				font-size: 12px;
+			}
+		}	
+	}
+}

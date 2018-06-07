@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { AuthServiceProvider } from './../../providers/auth-service/auth-service';
 import { HttptliveProvider } from './../../providers/httptlive/httptlive';
 
@@ -23,13 +23,29 @@ export class SignupPage {
         public httpt: HttptliveProvider
     ){
         this.httpt.setData({
+            name: '',
             email: '',
-            password: ''
+            group_code: '',
+            password: '',
+            password_confirmation: ''
         });
     }
 
+    ionViewCanEnter() {
+        if( this.auth.authenticated()){
+            this.navCtrl.setRoot( 'HomePage');
+        }
+    }
+
     signup() {
-        console.log( 'creating account');
+        this.httpt.submit('post', 'register')
+        .then( response => {
+            this.auth.login( response['token']);
+            this.navCtrl.push( 'HomePage');
+        })
+        .catch( error => {
+            this.httpt.formData['password_confirmation'] = '';
+        });
     }
 
     login() {

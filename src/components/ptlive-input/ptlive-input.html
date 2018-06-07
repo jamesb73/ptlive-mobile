@@ -1,4 +1,4 @@
 <div class="ptlive-input">
-	<input class="ptlive-input--field" [type]="type" [placeholder]="placeholder" [class.has-error]="error" [value]="value" (input)='updated($event.target.value)'>
+	<input class="ptlive-input--field" [type]="type" [name]="name" [placeholder]="placeholder" [class.has-error]="error" [value]="value" (input)='updated($event.target.value)'>
 	<span class="ptlive-input--error"> {{ error }} </span>
 </div>

@@ -1,29 +1,10 @@
-<ion-content padding>
+<ion-content>
+	<ptlive-header> Packet Tour Live Official </ptlive-header>
 
-	<ion-row class="ptlive-buttons">
-		<ion-col col-6 class="ptlive-buttons--column">
-		  	<button ion-button (click)="test()">
-		  		<ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon>
-			</button>
-		</ion-col>
-		<ion-col col-6 class="ptlive-buttons--column">
-		  	<button ion-button (click)="logout()">
-		  		<ion-icon ios="ios-pin" md="md-pin"></ion-icon>
-			</button>
-		</ion-col>
-	</ion-row>
+	<ptlive-countdown date="2018-07-28 17:00:00"></ptlive-countdown>
 
-	<ion-row class="ptlive-buttons">
-		<ion-col col-6 class="ptlive-buttons--column">
-		  	<button ion-button>
-		  		<ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon>
-			</button>
-		</ion-col>
-		<ion-col col-6 class="ptlive-buttons--column">
-		  	<button ion-button>
-		  		<ion-icon ios="ios-pin" md="md-pin"></ion-icon>
-			</button>
-		</ion-col>
-	</ion-row>
+	<div class="map-holder">
+		<ptlive-map> </ptlive-map>
+	</div>
 
 </ion-content>

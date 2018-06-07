@@ -1,10 +1,10 @@
-<ion-content>
+<ion-content class="page-login">
 
 	<ptlive-content [logo]="true">
 
-	  	<ptlive-input type="text" placeholder="Email" [(value)]="httpt.formData.email" [(error)]="httpt.errors.email"></ptlive-input>
+	  	<ptlive-input type="text" placeholder="Email" name="email" [(value)]="httpt.formData.email" [(error)]="httpt.errors.email"></ptlive-input>
 
-	  	<ptlive-input type="password" placeholder="Password" [(value)]="httpt.formData.password" [(error)]="httpt.errors.password"></ptlive-input>
+	  	<ptlive-input type="password" placeholder="Password" name="password" [(value)]="httpt.formData.password" [(error)]="httpt.errors.password"></ptlive-input>
 
 		<button ion-button (click)="login()">Login</button>
 

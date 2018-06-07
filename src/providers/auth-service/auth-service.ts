@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import  Cookies  from 'js-cookie';
 
 /*
@@ -11,18 +11,35 @@ import  Cookies  from 'js-cookie';
 @Injectable()
 export class AuthServiceProvider {
 
-	constructor() {}
+    public data: any;
+
+	constructor(private storage: Storage) {}
+
+    init() {
+        return new Promise( resolve => {
+            this.storage.get('ptlive_data').then( data => {
+                this.data = data;
+                resolve();
+            });
+        });
+    }
  
-	login() {
-	  	Cookies.set('ptlive-auth', true);
+	login( data) {
+        this.storage.set('ptlive_data', data);
+        this.data = data;
 	}
 
 	logout() {
-	  	Cookies.remove('ptlive-auth');
+	  	this.storage.set('ptlive_data', null);
+        this.data = null;
 	}
 
+    auth_token() {
+        return this.data ? this.data.token : '';
+    }
+
 	authenticated() {
-	  	return !!Cookies.get('ptlive-auth');
+	  	return !!this.data;
 	}
 
 }

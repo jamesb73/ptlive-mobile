@@ -16,6 +16,7 @@ export class PtliveInputComponent {
     @Input('placeholder') placeholder = '';
     @Input('error') error = '';
     @Input('value') value = '';
+    @Input('name') name = '';
     @Output() valueChange = new EventEmitter();
     @Output() errorChange = new EventEmitter();
 
